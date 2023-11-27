@@ -10,6 +10,10 @@ const userNumber = document.getElementById('user-number');
 // Bottone Play
 const play = document.getElementById('play');
 
+let winCount = 0;
+
+let gameCount = 0;
+
 play.addEventListener('click', function() {
 
   const choiceOutput = choice.value.toLowerCase();
@@ -25,7 +29,9 @@ play.addEventListener('click', function() {
   const sum = userNumberOutput + computerNumber;
 
   function determineWinner() {
+    gameCount++
     if (sum % 2 === 0 && choiceOutput === 'pari' || sum % 2 === 1 && choiceOutput === 'dispari') {
+      winCount++;
       return 'Hai Vinto!'
     } else {
       return 'Hai Perso'
@@ -37,6 +43,7 @@ play.addEventListener('click', function() {
   document.getElementById('computer-number-output').innerHTML = `Il computer ha scelto il numero: ${computerNumber}`;
   document.getElementById('total').innerHTML = `Il totale è: ${sum}`;
   document.getElementById('winner').innerHTML = determineWinner();
+  document.getElementById('win-count').innerHTML = `Vittorie: ${winCount} su ${gameCount}`;
 })
 
 
