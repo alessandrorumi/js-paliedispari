@@ -22,3 +22,13 @@ console.log(computerNumber);
 const sum = userNumber + computerNumber;
 
 console.log(sum);
+
+function determineWinner() {
+  if (sum % 2 === 0 && choice === 'pari' || sum % 2 === 1 && choice === 'dispari') {
+    return 'Hai Vinto!'
+  } else {
+    return 'Hai Perso'
+  }
+}
+
+console.log(determineWinner());
