@@ -1,23 +1,29 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-// Dichiarazione parola
-let word = 'parola';
-
 // Dichiarazione parola (al contrario)
 let reverseWord = '';
 
-// Iterazione lettere parola (al contrario)
-for (let i = word.length - 1; i >= 0; i--) {
-  reverseWord += word[i];
+// Creazione funzione
+function checkPalindrome(word) {
+  
+  // Iterazione lettere parola (al contrario)
+  for (let i = word.length - 1; i >= 0; i--) {
+    reverseWord += word[i];
+  }
+  
+  // Comparazione 'word' e 'reverseWord'
+  if (reverseWord === word) {
+    return true;
+  
+  } else {
+    return false;
+  }
+
 }
 
-// Comparazione 'word' e 'reverseWord'
-if (reverseWord === word) {
-  console.log(true);
+console.log(checkPalindrome('itopinonavevanonipoti'));
+// Dovrebbe stampare 'true';
 
-} else {
-  console.log(false);
-}
-
-console.log(reverseWord);
+console.log(checkPalindrome('panino'));
+// Dovrebbe stampare 'false';
