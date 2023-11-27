@@ -32,6 +32,11 @@ play.addEventListener('click', function() {
     }
   }
   
+  document.getElementById('choice-output').innerHTML = `Hai scelto: ${choiceOutput}`;
+  document.getElementById('user-number-output').innerHTML = `Hai scelto il numero: ${userNumberOutput}`;
+  document.getElementById('computer-number-output').innerHTML = `Il computer ha scelto il numero: ${computerNumber}`;
+  document.getElementById('total').innerHTML = `Il totale è: ${sum}`;
+  document.getElementById('winner').innerHTML = determineWinner();
 })
 
 
