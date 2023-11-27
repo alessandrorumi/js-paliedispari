@@ -3,40 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Pari e Dispari</title>
 </head>
 <body>
 
-  <h5>Scegli pari o dispari</h5>
-  <input type="text" id="user-choice">
+  <div class="container">
 
-  <h5>Scegli un numero da 1 a 5</h5>
-  <input type="text" id="user-number">
-
-  <br>
-
-  <button id="play">GIOCA</button>
-
-  <br>
-
-  <span id="choice-output"></span>
-
-  <br>
-
-  <span id="user-number-output"></span>
-
-  <br>
-
-  <span id="computer-number-output"></span>
-
-  <br>
-
-  <span id="total"></span> 
-
-  <br>
-
-  <span id="winner"></span> 
+    <h5>Scegli pari o dispari</h5>
+    <label for="scelta">Scegli pari o dispari:</label>
+      <select id="user-choice">
+        <option value="pari">Pari</option>
+        <option value="dispari">Dispari</option>
+      </select>
   
+    <h5>Scegli un numero da 1 a 5</h5>
+    <input type="number" id="user-number" min="1" max="5">
+    <br>
+    <button id="play">GIOCA</button>
+    <br>
+    <span id="choice-output"></span>
+    <br>
+    <span id="user-number-output"></span>
+    <br>
+    <span id="computer-number-output"></span>
+    <br>
+    <span id="total"></span> 
+    <br>
+    <span id="winner"></span> 
+    
+  </div>
+
   <script src="script/myScript.js"></script>
   
 </body>
