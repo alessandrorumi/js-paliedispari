@@ -9,3 +9,11 @@ const userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
 
 console.log(choice);
 console.log(userNumber);
+
+// Funzione Generazione n. Random computer
+function getComputerChoice(min, max) {
+  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  return randomNumber;
+}
+
+console.log(getComputerChoice(1, 5));
